@@ -19,8 +19,8 @@ def home():
 
 @app.route('/animal/<int:id>')
 def animal_by_id(id):
-    return ''
-
+    animal = Animal.query.get_or_404(id)
+    return 'animal.html'
 @app.route('/zookeeper/<int:id>')
 def zookeeper_by_id(id):
     return ''
